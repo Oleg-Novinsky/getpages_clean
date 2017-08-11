@@ -1,0 +1,74 @@
+.{
+  z-index: 100;
+  margin: 0;
+  padding: 0;
+}
+input, .buttons, .logout {
+  width: 70%;
+  margin-top:20px;
+  margin-left: 15%;
+  overflow: hidden;
+}
+.logout i{
+  float: right;
+  color: black;
+  font-size: 1.2em;
+}
+.logout i:hover{
+  color: gray;
+}
+.inputLines input{
+  padding-left: 10px;
+}
+i {
+  color: #cc0000;
+}
+i:hover{
+  color: #ff0000;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.buttons button{
+  width: 20%;
+}
+
+.overlay{
+  z-index: 101;
+  width: 100%;
+  height: 100%;
+  background-color: black;
+  opacity: 0.7;
+  display: block;
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+.loadStatus{
+  z-index: 102;
+  position: fixed;
+  top: 40%;
+  left: 0;
+  margin-left: 30%;
+  width: 40%;
+  display: block;
+  height: 100px;
+  text-align: center;
+}
+
+.loadSpiner{
+  color: white;
+}
+.loadSpiner:hover{
+  color: white;
+}
+.loadSpin{
+  z-index: 103;
+  margin-top: 25px;
+  text-align: right;
+}
+.loadText{
+  color: white;
+  z-index: 103;
+  margin-top: 35px;
+  font-size: 1.2em;
+}

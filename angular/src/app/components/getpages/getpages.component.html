@@ -1,0 +1,27 @@
+<div *ngIf="isLoading">
+  <div class="overlay"></div>
+  <div class="loadStatus">
+    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+      <div class="col-xs-2 col-sm-2 col-md-2 col-lg-2 loadSpin">
+        <i class="fa fa-spinner fa-pulse fa-3x fa-fw loadSpiner"></i>
+      </div>
+      <div class="col-xs-10 col-sm-10 col-md-10 col-lg-10 loadText">
+        {{loadStatus}}
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="logout">
+  <i (click)="onLogout()" class="fa fa-sign-out" aria-hidden="true">Выйти</i> 
+</div>
+
+<div class="buttons">
+  <button (click)="getDataFromPages()" class="btn btn-success">Скачать PDF</button>
+  <button (click)="addInput()" class="btn btn-default" style="float: right">Добавить сайт</button>
+</div>
+
+<div *ngFor="let item of sitesArr" class="inputLines">
+  <input [(ngModel)]="item.site" name="item.name" placeholder="Введите адрес сайта"/>
+  <i (click)="deleteInput(item.name)" class="fa fa-times fa-lg"></i>
+</div>
